@@ -7,6 +7,14 @@
 
 List of vendor prefixes known to the web platform.
 
+List of (real<sup>†</sup>) vendor prefixes known to the web platform.
+From [Wikipedia](https://en.wikipedia.org/wiki/CSS_hack#Browser_prefixes) and the [CSS 2.1 spec](https://www.w3.org/TR/CSS21/syndata.html#vendor-keyword-history).
+
+† — real, as in, `mso-` and `prince-` are not included because they are
+not valid.
+
+> data from [wooorm/vendors](https://github.com/wooorm/vendors)
+
 ## Usage
 
 ```ts
