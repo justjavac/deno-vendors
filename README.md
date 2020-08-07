@@ -25,7 +25,7 @@ console.log(vendors);
 
 Output:
 
-```json
+```ts
 [
   'ah',
   'apple',
