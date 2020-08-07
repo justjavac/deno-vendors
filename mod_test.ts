@@ -1,14 +1,18 @@
-import { assertEquals } from "https://deno.land/std@0.63.0/testing/asserts.ts";
+import {
+  assert,
+  assertEquals,
+} from "https://deno.land/std@0.63.0/testing/asserts.ts";
 
-import starter from "./mod.ts";
+import vendors from "./mod.ts";
 
-Deno.test("test starter function", (): void => {
-  assertEquals(starter("abc"), "abc");
-});
+Deno.test("vendors is a array", (): void => {
+  assert(Array.isArray(vendors));
 
-Deno.test({
-  name: "test starter function",
-  fn(): void {
-    assertEquals(starter("foo bar"), "foo bar");
-  },
+  vendors.forEach(function (vendor) {
+    assertEquals(
+      typeof vendor,
+      "string",
+      "`" + vendor + "` should be a string",
+    );
+  });
 });
