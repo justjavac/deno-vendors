@@ -3,7 +3,6 @@
 [![tag](https://img.shields.io/github/release/justjavac/deno-vendors)](https://github.com/justjavac/deno-vendors/releases)
 [![Build Status](https://github.com/justjavac/deno-vendors/workflows/ci/badge.svg?branch=master)](https://github.com/justjavac/deno-vendors/actions)
 [![license](https://img.shields.io/github/license/justjavac/deno-vendors)](https://github.com/justjavac/deno-vendors/blob/master/LICENSE)
-[![](https://img.shields.io/badge/deno-v1.2-green.svg)](https://github.com/denoland/deno)
 
 List of vendor prefixes known to the web platform.
 
