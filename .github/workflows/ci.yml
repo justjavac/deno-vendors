@@ -18,10 +18,10 @@ jobs:
           deno-version: 1.4
 
       - name: Format
-        run: deno fmt --unstable --ignore=bundle --check
+        run: deno fmt --unstable --ignore=./bundle --check
 
       - name: Lint
-        run: deno lint --unstable --ignore=bundle
+        run: deno lint --unstable --ignore=./bundle
 
       - name: Tests
         run: deno test --unstable --coverage
