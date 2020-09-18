@@ -26,23 +26,23 @@ Output:
 
 ```sh
 > [
-  "ah",
-  "apple",
-  "atsc",
-  "epub",
-  "fx",
-  "hp",
-  "khtml",
-  "moz",
-  "ms",
-  "o",
-  "rim",
-  "ro",
-  "tc",
-  "wap",
-  "webkit",
-  "xv",
-]
+>  "ah",
+>  "apple",
+>  "atsc",
+>  "epub",
+>  "fx",
+>  "hp",
+>  "khtml",
+>  "moz",
+>  "ms",
+>  "o",
+>  "rim",
+>  "ro",
+>  "tc",
+>  "wap",
+>  "webkit",
+>  "xv",
+> ]
 ```
 
 You can also check if something is a correct `Vendor` by using `isVendor()`.
