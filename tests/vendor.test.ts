@@ -1,6 +1,6 @@
 import type { Vendor } from "../mod.ts";
 
-// This code should be fine, except for the fact that we haven't used the variables
+// This code should be fine
 
 <Vendor>"web";
 <Vendor>"o";
