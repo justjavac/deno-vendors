@@ -17,11 +17,11 @@ jobs:
         with:
           deno-version: 1.4
 
-      - name: Format
-        run: deno fmt --unstable --ignore=./bundle --check
+      # - name: Format
+      #   run: deno fmt --unstable --ignore=./bundle --check
 
-      - name: Lint
-        run: deno lint --unstable --ignore=./bundle
+      # - name: Lint
+      #   run: deno lint --unstable --ignore=./bundle
 
       - name: Tests
         run: deno test --unstable --coverage
