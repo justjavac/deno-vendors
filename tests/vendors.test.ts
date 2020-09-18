@@ -9,7 +9,7 @@ Deno.test("vendors", () => {
     assertStrictEquals(
       typeof vendor,
       "string",
-      `\`typeof ${vendor}\` should be \`string\``
+      `\`typeof ${vendor}\` should be \`string\``,
     );
   }
 });

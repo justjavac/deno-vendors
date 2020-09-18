@@ -8,5 +8,5 @@ import { vendors } from "./vendors.ts";
  * @returns boolean for if the `vendor` argument is in the `vendors` list
  */
 export function isVendor(vendor: string) {
-  return vendors.includes(<Vendor>vendor);
+  return vendors.includes(<Vendor> vendor);
 }

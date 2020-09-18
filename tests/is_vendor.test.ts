@@ -11,7 +11,7 @@ Deno.test("isVendor()", () => {
   for (const falseVendor of falseVendors) {
     assert(
       !isVendor(falseVendor),
-      `\`isVendor("${falseVendor}")\` should return false`
+      `\`isVendor("${falseVendor}")\` should return false`,
     );
   }
 });
