@@ -1,3 +1,3 @@
-import { vendors } from "../vendors.ts";
+import type { vendors } from "../vendors.ts";
 
 export type Vendor = typeof vendors[number];
