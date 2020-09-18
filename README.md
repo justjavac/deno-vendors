@@ -17,31 +17,79 @@ not valid.
 ## Usage
 
 ```ts
-import vendors from "https://deno.land/x/vendors/mod.ts";
+import { vendors } from "https://deno.land/x/vendors/mod.ts";
 
 console.log(vendors);
 ```
 
 Output:
 
+```sh
+> [
+>  "ah",
+>  "apple",
+>  "atsc",
+>  "epub",
+>  "fx",
+>  "hp",
+>  "khtml",
+>  "moz",
+>  "ms",
+>  "o",
+>  "rim",
+>  "ro",
+>  "tc",
+>  "wap",
+>  "webkit",
+>  "xv",
+> ]
+```
+
+You can also check if something is a correct `Vendor` by using `isVendor()`.
+
 ```ts
-[
-  'ah',
-  'apple',
-  'atsc',
-  'epub',
-  'hp',
-  'khtml',
-  'moz',
-  'ms',
-  'o',
-  'rim',
-  'ro',
-  'tc',
-  'wap',
-  'webkit',
-  'xv'
-]
+import { isVendor } from "https://deno.land/x/vendors/mod.ts";
+
+console.log(isVendor("ms"));
+console.log(isVendor("blah"));
+```
+
+Output:
+
+```sh
+> true
+> false
+```
+
+Instead of running `isVendor()` if you need to assign a variable to a supposed `string` that is a vendor, you can just set the type of the variable to `Vendor`. Thankfully, the TypeScript compiler will make sure that your variable is one of the valid `vendors`.
+
+```ts
+import { Vendor } from "https://deno.land/x/vendors/mod.ts";
+
+const myVendor: Vendor = "o";
+```
+
+No output because it's valid!
+
+Here is an example of what would happen if our variable isn't a valid `Vendor`:
+
+```ts
+import { Vendor } from "https://deno.land/x/vendors/mod.ts";
+
+const myBadVendor1: Vendor = "";
+const myBadVendor2: Vendor = 24;
+```
+
+Here are the two errors in the output
+
+```sh
+> error: TS2322 [ERROR]: Type '""' is not assignable to type '"ah" | "apple" | "atsc" | "epub" | "fx" | "hp" | "khtml" | "moz" | "ms" | "o" | "rim" | "ro" | "tc" | "wap" | "webkit" | "xv"'.
+> const myBadVendor1: Vendor = "";
+>       ~~~~~~~~~~~~
+>
+> TS2322 [ERROR]: Type '24' is not assignable to type '"ah" | "apple" | "atsc" | "epub" | "fx" | "hp" | "khtml" | "moz" | "ms" | "o" | "rim" | "ro" | "tc" | "wap" | "webkit" | "xv"'.
+> const myBadVendor2: Vendor = 24;
+>       ~~~~~~~~~~~~
 ```
 
 ### License

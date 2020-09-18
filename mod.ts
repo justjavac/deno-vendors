@@ -1,19 +1,3 @@
-const venders = [
-  "ah",
-  "apple",
-  "atsc",
-  "epub",
-  "hp",
-  "khtml",
-  "moz",
-  "ms",
-  "o",
-  "rim",
-  "ro",
-  "tc",
-  "wap",
-  "webkit",
-  "xv",
-] as const;
-
-export default venders;
+export type { Vendor } from "./types/vendor.ts";
+export { vendors } from "./vendors.ts";
+export { isVendor } from "./is_vendor.ts";
