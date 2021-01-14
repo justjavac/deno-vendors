@@ -7,6 +7,6 @@ import { vendors } from "./vendors.ts";
  * @param vendor the given vendor string
  * @returns boolean for if the `vendor` argument is in the `vendors` list
  */
-export function isVendor(vendor: string) {
-  return vendors.includes(<Vendor> vendor);
+export function isVendor(vendor: string): vendor is Vendor {
+  return vendors.includes(vendor as Vendor);
 }
